@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Remove Verified Tweets",
+  "version": "1.0",
+  "description": "Remove twitter pay to win ! An extension to remove tweets with a verified badge on Twitter.",
+  "permissions": ["tabs"],
+  "host_permissions": ["https://twitter.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "defaut_title": "Remove Verified Tweets",
+    "default_icon": {
+      "32": "/images/logo-32.png",
+      "128": "/images/logo-128.png"
+    }
+  },
+  "optional_host_permissions": ["*://*/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "32": "/images/logo-32.png",
+    "128": "/images/logo-128.png"
+  }
+}
